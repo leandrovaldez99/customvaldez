@@ -78,20 +78,74 @@ nav ul li a:hover {
     background-attachment: fixed;
     height: 100vh;
     filter: saturate(0.9);
+    scroll-snap-align: start;
 }
 
-#section-1 div img {
-    width: 600px;
-    height: 600px;
-    position: absolute;
-    left: 33%;
+.logo0 {
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-name: logo0;
+    animation-fill-mode: forwards;
+}
+
+.logo1 {
+    animation-duration: 1s;
+    animation-delay: 2.5s;
+    animation-name: logo1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes logo0 {
+    from {
+        position: relative;
+        left: 770px;
+    }
+
+    to {
+        position: absolute;
+        left: 33%;
+    }
+}
+
+@keyframes logo1 {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+#section-1 .logo {
+    position: relative;
     top: 18%;
-    transition: all 1s ease;
 }
 
-#section-1 div img:hover {
-    transform: scale(1.1);
+#section-1 .logo0 {
+    max-width: 350px;
+    position: relative;
+    left: 770px;
+    top: 18%;
 }
+
+#section-1 .logo1 {
+    max-width: 486px;
+    position: absolute;
+    opacity: 0%;
+    left: 42%;
+    top: 100px;
+}
+
+/* #section-1 .logo:hover .logo0{
+    position: relative;
+    left: 770px;
+    
+}
+#section-1 .logo:hover .logo1{
+    opacity: 0%;
+    left: 900px;
+} */
 
 /* Fin Home */
 
@@ -172,18 +226,18 @@ nav ul li a:hover {
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
     padding: 40px;
     position: relative;
-    top: 150px;
+    top: 95px;
     left: -8px;
 }
 
 .galeria p {
-    font-weight: bold;
+    font-weight: 400;
     color: rgb(255, 68, 0);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
     font-size: 35px;
     text-align: center;
     position: relative;
-    top: 165px;
+    top: 100px;
 
 }
 
@@ -212,8 +266,10 @@ nav ul li a:hover {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-around;
-    padding: 35px 15px;
-    width: 100%;
+    width: 80%;
+    position: relative;
+    left: 10%;
+    margin-top: 7%;
 }
 
 @media screen and (min-width:1380px) {
@@ -225,10 +281,10 @@ nav ul li a:hover {
 .box-item {
     position: relative;
     backface-visibility: hidden;
-    width: 300px;
+    width: 200px;
     margin-bottom: 35px;
-    margin-top: 15%;
-    margin-right: 10px;
+    /* margin-top: 15%; */
+    margin-right: 20px;
     max-width: 100%;
 }
 
@@ -245,7 +301,7 @@ nav ul li a:hover {
     background-size: cover;
     background-position: center;
     border-radius: 8px;
-    min-height: 400px;
+    min-height: 300px;
     -ms-transition: transform 0.7s cubic-bezier(.4, .2, .2, 1);
     transition: transform 0.7s cubic-bezier(.4, .2, .2, 1);
     -webkit-transition: transform 0.7s cubic-bezier(.4, .2, .2, 1);
@@ -298,7 +354,7 @@ nav ul li a:hover {
     position: absolute;
     left: 0;
     width: 100%;
-    padding: 60px;
+    padding: 20px;
     outline: 1px solid transparent;
     -webkit-perspective: inherit;
     perspective: inherit;
@@ -311,12 +367,13 @@ nav ul li a:hover {
 }
 
 .flip-box-header {
-    font-size: 30px;
+    font-size: 20px;
     line-height: 1em;
+    margin-top: 20px;
 }
 
 .flip-box p {
-    font-size: 20px;
+    font-size: 15px;
     line-height: 1.5em;
 }
 
@@ -324,19 +381,7 @@ nav ul li a:hover {
     margin-top: 25px;
     filter: opacity(50%);
     backdrop-filter: blur(5px);
-}
-
-.flip-box-button {
-    background-color: transparent;
-    border: 2px solid #fff;
-    border-radius: 2px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 25px;
-    padding: 15px 20px;
-    text-transform: uppercase;
+    transform: scale(0.7);
 }
 
 /* fin galeria */
@@ -348,7 +393,8 @@ nav ul li a:hover {
     background-attachment: fixed;
     height: 100vh;
 }
-#section-4 .servicios-titulo h2{
+
+#section-4 .servicios-titulo h2 {
     color: white;
     display: flex;
     justify-content: center;
@@ -520,67 +566,73 @@ textarea:required {
     margin-top: 18px;
     transition: all 0.5s ease;
 }
+
 /*facebook*/
 .wrapper ul li:hover.facebook {
     border: 5px solid #3b5998;
     box-shadow: 0 0 15px #3b5998;
     transition: all 0.5s ease;
-  }
-  
-  .wrapper ul li:hover .fa-facebook {
+}
+
+.wrapper ul li:hover .fa-facebook {
     color: #3b5998;
     text-shadow: 0 0 15px #3b5998;
     transition: all 0.5s ease;
-  }
-  
-  /* instagram */
-  .wrapper ul li:hover.instagram {
+}
+
+/* instagram */
+.wrapper ul li:hover.instagram {
     border: 5px solid #bc2a8d;
     box-shadow: 0 0 15px #bc2a8d;
     transition: all 0.5s ease;
-  }
-  
-  .wrapper ul li:hover .fa-instagram {
+}
+
+.wrapper ul li:hover .fa-instagram {
     color: #bc2a8d;
     text-shadow: 0 0 15px #bc2a8d;
     transition: all 0.5s ease;
-  }
+}
 
-  /* whatsapp */
-  .wrapper ul li:hover.whatsapp {
+/* whatsapp */
+.wrapper ul li:hover.whatsapp {
     border: 5px solid #4dc247;
     box-shadow: 0 0 15px #4dc247;
     transition: all 0.5s ease;
-  }
-  
-  .wrapper ul li:hover .fa-whatsapp {
+}
+
+.wrapper ul li:hover .fa-whatsapp {
     color: #4dc247;
     text-shadow: 0 0 15px #4dc247;
     transition: all 0.5s ease;
-  }
-  @media screen and (max-width: 640px){
+}
+
+@media screen and (max-width: 640px) {
     .wrapper {
         width: 350px;
     }
-    .wrapper ul li{
+
+    .wrapper ul li {
         margin-top: 10px;
     }
-    .wrapper ul li.google{
+
+    .wrapper ul li.google {
         margin-left: 60px;
     }
-  }
-  
-  
-  @media screen and (max-width: 340px){
+}
+
+
+@media screen and (max-width: 340px) {
     .wrapper {
         width: 150px;
     }
-    .wrapper ul li{
-        margin:15px;
+
+    .wrapper ul li {
+        margin: 15px;
     }
-    .wrapper ul li.google{
+
+    .wrapper ul li.google {
         margin-left: 15px;
     }
-  }
+}
 
 /* fin contacto */
