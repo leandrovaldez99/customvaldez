@@ -110,6 +110,7 @@ nav ul li a:hover {
 @keyframes logo1 {
     from {
         opacity: 0%;
+        filter: blur(6px);
     }
 
     to {
@@ -408,6 +409,7 @@ nav ul li a:hover {
 }
 
 
+
 /* fin servicios */
 
 /* inicio contacto */
@@ -433,18 +435,20 @@ nav ul li a:hover {
 
 #contact-form {
     background-color: rgba(0, 0, 0, 0.68);
-    padding: 10px 20px 30px 20px;
+    padding: 20px;
     max-width: 100%;
     float: left;
-    left: 50%;
+    left: 660px;
     position: absolute;
-    margin-top: 150px;
+    margin-top: 130px;
     margin-left: -260px;
     border-radius: 15px;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     backdrop-filter: blur(5px);
-    width: 550px;
+    width: 1050px;
+    display: flex;
+    gap: 30px;
 
 }
 
@@ -536,10 +540,11 @@ textarea:required {
     }
 }
 
+
 .wrapper {
     position: relative;
     top: 88%;
-    left: 58%;
+    left: 56%;
     transform: translate(-50%, -50%);
     width: 550px;
 }
