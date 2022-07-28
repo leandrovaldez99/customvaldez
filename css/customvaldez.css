@@ -71,6 +71,28 @@ nav ul li a:hover {
     height: 5px;
 }
 
+/*boton whatsapp*/
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.my-float {
+    margin-top: 15px;
+}
+
+/*boton whatsapp*/
+
 /* Comienzo Home */
 #section-1 {
     background: url(/img/fondo/ktm-300-exc-tpi-4k-mud-2019-bikes-extreme.png);
@@ -78,7 +100,6 @@ nav ul li a:hover {
     background-attachment: fixed;
     height: 100vh;
     filter: saturate(0.9);
-    scroll-snap-align: start;
 }
 
 .logo0 {
@@ -137,16 +158,6 @@ nav ul li a:hover {
     left: 42%;
     top: 100px;
 }
-
-/* #section-1 .logo:hover .logo0{
-    position: relative;
-    left: 770px;
-    
-}
-#section-1 .logo:hover .logo1{
-    opacity: 0%;
-    left: 900px;
-} */
 
 /* Fin Home */
 
@@ -385,6 +396,8 @@ nav ul li a:hover {
     transform: scale(0.7);
 }
 
+
+
 /* fin galeria */
 
 /* inicio servicios */
@@ -395,19 +408,50 @@ nav ul li a:hover {
     height: 100vh;
 }
 
-#section-4 .servicios-titulo h2 {
+#section-4 .servicios {
+    background-color: rgba(0, 0, 0, 0.68);
+    border-radius: 15px;
+    padding: 20px;
+    width: 65%;
+    text-align: center;
+    position: relative;
+    top: 30%;
+    left: 17%;
+    backdrop-filter: blur(5px);
+}
+
+#section-4 .servicios .info-servicios {
+    display: inline-block;
+    justify-content: center;
+}
+
+
+#section-4 .servicios .info-servicios h2 {
     color: white;
     display: flex;
     justify-content: center;
     font-size: 100px;
     font-weight: bold;
-    text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 0 15px rgb(0, 0, 0);
     padding: 40px;
-    position: relative;
-    top: 150px;
-    left: -8px;
 }
 
+#section-4 .servicios .info-servicios p {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px;
+    line-height: 35px;
+}
+
+#section-4 .servicios .info-servicios h3 {
+    font-weight: bold;
+    color: rgb(255, 68, 0);
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+    font-size: 35px;
+    text-align: center;
+    margin-top: 50px;
+}
 
 
 /* fin servicios */
@@ -544,7 +588,7 @@ textarea:required {
 .wrapper {
     position: relative;
     top: 88%;
-    left: 56%;
+    left: 60%;
     transform: translate(-50%, -50%);
     width: 550px;
 }
@@ -599,10 +643,12 @@ textarea:required {
 }
 
 /* whatsapp */
+
 .wrapper ul li:hover.whatsapp {
     border: 5px solid #4dc247;
     box-shadow: 0 0 15px #4dc247;
     transition: all 0.5s ease;
+
 }
 
 .wrapper ul li:hover .fa-whatsapp {
@@ -641,3 +687,30 @@ textarea:required {
 }
 
 /* fin contacto */
+
+/* inicio responsive */
+@media screen and (max-width:550px) {
+
+    nav {
+        overflow-x: scroll;
+    }
+
+
+    #section-1 .logo1 {
+        display: none;
+    }
+
+    #section-1 {
+        background: url(/img/fondo/ktm-300-exc-tpi-4k-mud-2019-bikes-extreme.png);
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100vh;
+        filter: saturate(0.9);
+    }
+
+
+
+
+}
+
+/* fin responsive */
